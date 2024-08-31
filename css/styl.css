@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/f4.jpeg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Esto hace la imagen de fondo opaca */
+    z-index: -1;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    backdrop-filter: blur(5px); /* Efecto de desenfoque para mayor profundidad */
+}
+
+h2 {
+    color: #D6336C;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(221, 221, 221, 0.8);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #D6336C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #b52b5c;
+}
+
+p {
+    color: #D6336C;
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Estilos para la navegación */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.header.scrolled {
+    background-color: #f8f8f8;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #d6336c;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(0); }
+}
+
+.header {
+    animation: fadeIn 1s ease-out;
+}
+
+.nav ul li {
+    animation: slideIn 0.5s ease-out;
+}
+
+.nav ul li:nth-child(1) { animation-delay: 0s; }
+.nav ul li:nth-child(2) { animation-delay: 0.1s; }
+.nav ul li:nth-child(3) { animation-delay: 0.2s; }
+.nav ul li:nth-child(4) { animation-delay: 0.3s; }
+.nav ul li:nth-child(5) { animation-delay: 0.4s; }
+.nav ul li:nth-child(6) { animation-delay: 0.5s; }
+
+/* Estilos para la tabla */
+/* Ajustes para la tabla */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #D6336C;
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: rgba(214, 51, 108, 0.1);
+}
+
+/* Ajustes para los botones de acción */
+.action-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.action-buttons form {
+    margin: 0;
+    padding: 0;
+}
+
+.action-buttons input[type="submit"] {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-buttons input[type="submit"]:hover {
+    background-color: #D6336C;
+}
+
+/* Ajuste para el ancho de las columnas */
+table th:nth-child(1),
+table td:nth-child(1) {
+    width: 5%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2),
+table th:nth-child(3),
+table td:nth-child(3),
+table th:nth-child(4),
+table td:nth-child(4) {
+    width: 20%;
+}
+
+table th:nth-child(5),
+table td:nth-child(5) {
+    width: 15%;
+}
+
+table th:last-child,
+table td:last-child {
+    width: 20%;
+}

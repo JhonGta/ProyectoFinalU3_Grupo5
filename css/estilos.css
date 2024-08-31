@@ -1,0 +1,125 @@
+/* Estilos adicionales para el navbar */
+.navbar-custom {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+}
+
+.navbar-custom .nav-link {
+    color: #fff;
+    border: 2px solid transparent; /* Borde inicial transparente */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #ff7f50; /* Color del texto al hacer hover */
+    border-color: #ff7f50; /* Color del borde al hacer hover */
+    background-color: rgba(255, 127, 80, 0.2); /* Fondo ligeramente coloreado al hacer hover */
+}
+
+.navbar-custom .navbar-brand {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: #ff7f50; /* Efecto hover para la marca */
+}
+
+/* Ajustes para el carrusel */
+.carousel-inner img {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+    height: 100vh; /* Ajusta la imagen para que ocupe el 100% de la altura de la ventana */
+    object-fit: cover; /* Escala la imagen y corta si es necesario para llenar el contenedor */
+}
+
+.carousel-caption {
+    bottom: 20px;
+}
+
+.top-content {
+    width: 100%;
+    padding: 0;
+}
+ 
+.top-content .carousel-control-prev {
+    border-bottom: 0;
+}
+ 
+.top-content .carousel-control-next {
+    border-bottom: 0;
+}
+ 
+.top-content .carousel-caption {
+    padding-bottom: 60px;
+}
+ 
+.top-content .carousel-caption h1 {
+    padding-top: 60px;
+    color: #fff;
+}
+ 
+.top-content .carousel-caption h3 {
+    color: #fff;
+}
+ 
+.top-content .carousel-caption .carousel-caption-description {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+}
+ 
+.top-content .carousel-indicators li {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 767px) {
+ 
+    h1, h2 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+ 
+    .top-content .carousel-caption {
+        bottom: 20px;
+    }
+ 
+    .top-content .carousel-indicators {
+        display: none;
+    }
+ 
+}
+ 
+@media (max-width: 575px) {
+ 
+    .top-content .carousel-caption {
+        bottom: 0;
+        padding-bottom: 20px;
+    }
+ 
+    .top-content .carousel-caption-description {
+        display: none;
+    }
+ 
+    .top-content h1, 
+    .top-content h2, 
+    .top-content h3 {
+        font-size: 18px;
+    }
+ 
+}
+.carousel-item img {
+    transition: transform 0.5s ease-in-out;
+}
+body {
+    padding-top: 70px; /* Ajusta este valor según la altura de tu navbar */
+}
+@media (max-width: 767px) {
+    .carousel-inner img {
+        height: 60vh; /* Ajusta la altura para pantallas pequeñas */
+    }
+}

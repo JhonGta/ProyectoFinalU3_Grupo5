@@ -1,0 +1,185 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 60px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.header.scrolled {
+    background-color: #f8f8f8;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #d6336c;
+}
+
+/* Estilos para la tabla principal */
+table {
+    width: 80%;
+    margin: 100px auto 20px; /* Aumentado el margen superior para dar espacio al header fijo */
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(180, 176, 176, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #D6336C;
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: rgba(214, 51, 108, 0.1);
+}
+
+/* Ajustes para los botones de acción */
+.action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.action-buttons form {
+    margin: 0;
+    padding: 0;
+}
+
+.action-buttons input[type="submit"] {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #bbb6b6;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-buttons input[type="submit"]:hover {
+    background-color: #D6336C;
+}
+
+/* Estilos para los formularios de inserción y edición */
+.form-container {
+    width: 80%;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    color: #D6336C;
+    margin-bottom: 20px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #D6336C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #b52b5c;
+}
+
+/* Estilos para las alertas */
+.alert {
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #4CAF50;
+}
+
+.alert-error {
+    background-color: #f44336;
+}
+
+
+/* Estilos para las alertas */
+.alert {
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #4CAF50;
+}
+
+.alert-error {
+    background-color: #f44336;
+}

@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: flores
+    ports:
+      - "5432:5432"
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    ports:
+      - "3000:3000"
+
+  postgres_exporter:
+    image: wrouesnel/postgres_exporter
+    container_name: postgres_exporter
+    environment:
+      DATA_SOURCE_NAME: "postgresql://postgres:1234@postgres:55432/flores?sslmode=disable"
+    ports:
+      - "9187:9187"
+
+
+volumes:
+  grafana-storage:

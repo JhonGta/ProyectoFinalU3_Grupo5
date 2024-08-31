@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333; /* Fondo oscuro para el nav */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Centrar los elementos del nav */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Texto blanco */
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #dea71a; /* Fondo gris oscuro al pasar el ratón */
+    border-radius: 4px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #444; /* Borde gris oscuro */
+    border-radius: 8px;
+    box-shadow: 2px 2px 12px #222; /* Sombra más oscura */
+    background-color: #1e1e1e; /* Fondo gris oscuro para el formulario */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+input[type="text"], input[type="date"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #555; /* Borde gris oscuro */
+    border-radius: 4px;
+    background-color: #2e2e2e; /* Fondo gris oscuro para los inputs */
+    color: #ffffff;
+}
+
+input[type="submit"] {
+    padding: 8px 16px; /* Botones más pequeños */
+    background-color: #007BFF; /* Color azul */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    transform: scale(1.05);
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #1e1e1e; /* Fondo gris oscuro para la tabla */
+    color: #ffffff;
+}
+
+th, td {
+    border: 1px solid #555; /* Borde gris oscuro */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #333; /* Fondo más oscuro para los encabezados */
+}
+
+/* Contenedor para los botones de acción */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button, input[type="submit"] {
+    padding: 8px 12px; /* Tamaño de los botones */
+    background-color: #3486de; /* Color azul */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0 5px; /* Espaciado entre botones */
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    transform: scale(1.05);
+}
+
+button.delete {
+    background-color: #FF0000; /* Rojo para el botón de eliminar */
+}
+
+button.delete:hover {
+    background-color: #CC0000; /* Rojo más oscuro al pasar el ratón */
+}

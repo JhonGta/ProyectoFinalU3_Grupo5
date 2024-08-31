@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Apartados</title>
+    <link rel="stylesheet" href="/css/styl.css">
+    <link rel="stylesheet" href="/img/logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            padding: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu {
+            position: relative;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            padding: 10px;
+            list-style: none;
+            margin: 0;
+        }
+        .menu:hover .submenu {
+            display: block;
+        }
+        .submenu li {
+            margin: 5px 0;
+        }
+        .submenu a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function showContent(id) {
+            var sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <span>Apartado 1</span>
+            <ul class="submenu">
+                <li><a href="#" onclick="showContent('opcion1-1')">Opción 1-1</a></li>
+                <li><a href="#" onclick="showContent('opcion1-2')">Opción 1-2</a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <span>Apartado 2</span>
+            <ul class="submenu">
+                <li><a href="#" onclick="showContent('opcion2-1')">Opción 2-1</a></li>
+                <li><a href="#" onclick="showContent('opcion2-2')">Opción 2-2</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="opcion1-1" class="content">
+        <h2>Contenido de Opción 1-1</h2>
+        <p>Este es el contenido de la opción 1-1 del apartado 1.</p>
+    </div>
+    <div id="opcion1-2" class="content">
+        <h2>Contenido de Opción 1-2</h2>
+        <p>Este es el contenido de la opción 1-2 del apartado 1.</p>
+    </div>
+    <div id="opcion2-1" class="content">
+        <h2>Contenido de Opción 2-1</h2>
+        <p>Este es el contenido de la opción 2-1 del apartado 2.</p>
+    </div>
+    <div id="opcion2-2" class="content">
+        <h2>Contenido de Opción 2-2</h2>
+        <p>Este es el contenido de la opción 2-2 del apartado 2.</p>
+    </div>
+</body>
+</html>
